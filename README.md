@@ -143,12 +143,12 @@ Every random step (split, cross-validation folds, model seeds, Optuna sampler, b
 
 | Package | Version |
 |---|---|
-| Python | 3.13 |
-| numpy | 2.5.3 |
-| pandas | 3.0.5 |
+| Python | 3.13.17 |
+| numpy | 2.5.5 |
+| pandas | 3.1.1 |
 | scikit-learn | 1.9.1 |
 | xgboost | 3.4.1 |
-| optuna | 5.0.0 |
+| optuna | 5.1.0 |
 | matplotlib | 3.11.2 |
 | seaborn | 0.13.2 |
 
