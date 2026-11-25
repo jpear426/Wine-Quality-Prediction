@@ -1,0 +1,22 @@
+[project]
+name = "che1147-project-group-8"
+version = "0.1.0"
+description = "Build and evaluate models for predicting wine quality"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "optuna>=5.1.0",
+    "pandas>=3.1.1",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+    "ucimlrepo>=0.0.7",
+    "xgboost>=3.4.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]

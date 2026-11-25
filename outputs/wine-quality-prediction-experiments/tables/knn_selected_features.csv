@@ -1,0 +1,4 @@
+,knn_features
+red,"alcohol, citric_acid, sulphates, pH, density, chlorides, fixed_acidity"
+white,"alcohol, total_so2, pH, sulphates, free_so2, citric_acid, density, residual_sugar, chlorides, volatile_acidity"
+combined,"alcohol, free_so2, residual_sugar, density, sulphates, total_so2, fixed_acidity, chlorides, pH"

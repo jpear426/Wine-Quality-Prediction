@@ -1,0 +1,4 @@
+dataset,train wines,train premium,test wines,test premium,"premium share, train","premium share, test"
+red,1087,147,272,37,0.135,0.136
+white,3168,660,793,165,0.208,0.208
+combined,4256,807,1064,202,0.19,0.19
