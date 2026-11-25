@@ -1,0 +1,5 @@
+tested_on,trained_on,model,test_pr_auc,no_skill_pr_auc
+red,red,Random forest,0.566621603415782,0.13602941176470587
+red,white,Random forest,0.4186919976096512,0.13602941176470587
+white,white,Random forest,0.6323437031837819,0.2080706179066835
+white,red,Random forest,0.41261007795727456,0.2080706179066835

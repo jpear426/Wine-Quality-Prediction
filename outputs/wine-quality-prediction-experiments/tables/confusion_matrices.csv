@@ -1,0 +1,7 @@
+dataset,model,threshold,TN,FP,FN,TP
+red,Logistic regression,0.6787553662847441,210,25,14,23
+red,Random forest,0.4291721491134709,211,24,14,23
+white,Logistic regression,0.2559958153776363,490,138,42,123
+white,Random forest,0.31333333333333335,527,101,52,113
+combined,Logistic regression,0.2677970963426094,696,166,65,137
+combined,Random forest,0.26,715,147,48,154
