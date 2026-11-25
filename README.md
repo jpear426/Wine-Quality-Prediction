@@ -28,7 +28,7 @@ Four models (logistic regression, k-NN, random forest and XGBoost) were tuned th
 * Alcohol and density are among the three most important measurements for every dataset. Sulphates ranks first for red wine.
 * A model trained on one wine type loses about a quarter to a third of its PR-AUC on the other type, so each type needs its own model or a combined model.
 
-Full numbers are in `results/tables`, and the notebook's Section 9 prints the summary.
+Full numbers are in `outputs/outputs/wine-quality-prediction-experiments/tables`, and the notebook's Section 9 prints the summary.
 
 ## Repository structure
 
@@ -41,19 +41,20 @@ che1147-wine-quality/
 │   ├── winequality-red.csv    UCI Wine Quality, red wines (semicolon separated)
 │   └── winequality-white.csv  UCI Wine Quality, white wines (semicolon separated)
 ├── notebooks/
-│   └── CHE1147_Team8_Wine_Quality_Final.ipynb   full pipeline, run top to bottom
-└── results/
-    ├── tables/                11 csv tables written by the notebook
-    └── figures/               12 figures (png, 300 dpi) written by the notebook
+│   └── CHE1147_Team8_Wine_Quality.ipynb   full pipeline, run top to bottom
+└── outputs/
+    ├──wine-quality-prediction-experiments/
+        ├── tables/                11 csv tables written by the notebook
+        └── figures/               12 figures (png, 300 dpi) written by the notebook
 ```
 
 ## How to run
 
-The whole analysis (data loading, EDA, training, tuning, evaluation and interpretation) is in one notebook. Running it top to bottom regenerates every table and figure in `results/`. A full run takes about 10 minutes, most of it in the hyperparameter optimization of Section 6.
+The whole analysis (data loading, EDA, training, tuning, evaluation and interpretation) is in one notebook. Running it top to bottom regenerates every table and figure in `outputs/`. A full run takes about 10 minutes, most of it in the hyperparameter optimization of Section 6.
 
 ### Option 1: Google Colab
 
-1. Click the **Open in Colab** badge above, or upload `notebooks/CHE1147_Team8_Wine_Quality_Final.ipynb` to Colab.
+1. Click the **Open in Colab** badge above, or upload `notebooks/CHE1147_Team8_Wine_Quality.ipynb` to Colab.
 2. Choose **Runtime > Run all**.
 
 The first code cell installs the two packages Colab does not include (`optuna`, `ucimlrepo`). On Colab the notebook downloads the data from the UCI repository and writes the results to `/content/results`.
@@ -70,14 +71,14 @@ python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 
 pip install .                      # or: pip install -r requirements.txt
-jupyter notebook notebooks/CHE1147_Team8_Wine_Quality_Final.ipynb
+jupyter notebook notebooks/CHE1147_Team8_Wine_Quality.ipynb
 ```
 
 Then run all cells. Locally the notebook reads the csv files from `data/` and writes to `results/`. To run it without opening Jupyter:
 
 ```bash
 cd notebooks
-jupyter nbconvert --to notebook --execute --inplace CHE1147_Team8_Wine_Quality_Final.ipynb
+jupyter nbconvert --to notebook --execute --inplace CHE1147_Team8_Wine_Quality.ipynb
 ```
 
 ## Pipeline
@@ -103,7 +104,7 @@ Design choices that protect the test set:
 
 ## Outputs
 
-**Tables** (`results/tables`)
+**Tables** (`outputs/wine-quality-prediction-experiments/tables`)
 
 | File | Contents |
 |---|---|
@@ -119,7 +120,7 @@ Design choices that protect the test set:
 | `permutation_importance.csv` | Importance of each measurement for the selected models |
 | `transfer.csv` | Test PR-AUC when a model is applied to the other wine type |
 
-**Figures** (`results/figures`)
+**Figures** (`outputs/wine-quality-prediction-experiments/figures`)
 
 | File | Contents |
 |---|---|
